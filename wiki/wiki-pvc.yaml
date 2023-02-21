@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: "2022-12-23T16:02:58Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: postgresql
+    release: my-release
+    role: master
+  name: data-my-release-postgresql-0
+  namespace: default
+  resourceVersion: "21085"
+  uid: 198cd259-b828-44b3-a108-82b780134137
+spec:
+  storageClassName: manual
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  volumeMode: Filesystem
+status:
+  phase: Pending
